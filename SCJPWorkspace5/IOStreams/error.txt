@@ -1,0 +1,3 @@
+Hello2
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+	at file.printstream.STDOutputDemo.main(STDOutputDemo.java:27)

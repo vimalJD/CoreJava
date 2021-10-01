@@ -1,0 +1,11 @@
+package nonstaticmembers.classload.injvm;
+
+public class B {
+
+	A a;
+	void m2(A a) {
+		
+		this.a=a;
+//		a.print(msg);
+	}
+}

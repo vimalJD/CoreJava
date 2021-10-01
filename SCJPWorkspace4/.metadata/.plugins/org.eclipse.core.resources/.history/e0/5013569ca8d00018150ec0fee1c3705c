@@ -1,0 +1,5 @@
+package exception.trywithresource;
+
+public class TryWithResource {
+
+}

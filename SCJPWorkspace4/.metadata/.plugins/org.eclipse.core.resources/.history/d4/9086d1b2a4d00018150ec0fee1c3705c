@@ -1,0 +1,30 @@
+package exception.custom.development;
+
+public class HDFCBank implements Bank{
+
+	private double balance;
+//	private double amt;
+	
+	@Override
+	public void deposite(double amount) throws InvalidAmountException {
+		
+		if (amt<=0) {
+			throw new InvalidAmountException(amt+" is invalide amount");
+		}
+		balance = balance + amt;
+	}
+
+	@Override
+	public double withdraw(double amount) throws InvalidAmountException, InSufficientFundsException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void balanceEnquiry() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+}

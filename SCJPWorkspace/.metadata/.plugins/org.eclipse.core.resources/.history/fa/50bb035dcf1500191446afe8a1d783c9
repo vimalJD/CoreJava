@@ -1,0 +1,9 @@
+package test1;
+
+public class Test1 {
+	static void m3(Examlple e,Sample s) {
+		e.m1();
+		//CE
+		s.m2();
+	}
+}

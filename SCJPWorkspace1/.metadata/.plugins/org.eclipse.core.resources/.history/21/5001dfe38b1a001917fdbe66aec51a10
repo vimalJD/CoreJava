@@ -1,0 +1,6 @@
+package visible.constructor;
+
+public class Sample extends Example{
+
+	
+}

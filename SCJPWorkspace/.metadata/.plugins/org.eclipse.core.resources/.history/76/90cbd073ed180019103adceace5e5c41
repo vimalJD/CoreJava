@@ -1,0 +1,10 @@
+package nonstaticmembers.classload.vimp;
+
+public class Test {
+
+	public static void main(String[] args) throws ClassNotFoundException {
+		
+		Class.forName("Example1");
+		Sample.m2("Vimal","Patel");
+	}
+}

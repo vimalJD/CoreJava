@@ -1,0 +1,9 @@
+package visible.constructor;
+
+public class Example {
+
+	private Example() {
+		System.out.println("Example no-arg");
+	}
+
+}

@@ -1,0 +1,12 @@
+package multi.synchronization;
+
+public class Thread1 extends Thread {
+
+	Add a;
+
+	public Thread1(Add a) {
+
+		this.a = a;
+	}
+
+}

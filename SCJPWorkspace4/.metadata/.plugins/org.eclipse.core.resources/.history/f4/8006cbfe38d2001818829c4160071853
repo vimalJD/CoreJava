@@ -1,0 +1,13 @@
+package multi.over.loadingnoverriding;
+
+public class Test04_RunOVROVL {
+
+	public static void main(String[] args) {
+
+//		MyThread3 mt = new MyThread3();
+//		mt.start();
+
+		MyThread4 mt2 = new MyThread4();
+		mt2.start();
+	}
+}

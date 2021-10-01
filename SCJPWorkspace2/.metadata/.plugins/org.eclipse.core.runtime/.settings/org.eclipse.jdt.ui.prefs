@@ -1,0 +1,20 @@
+content_assist_category_order=org.eclipse.jdt.ui.templateProposalCategory\:0\u0000org.eclipse.jdt.ui.swtProposalCategory\:1\u0000org.eclipse.jdt.ui.javaNoTypeProposalCategory\:65537\u0000org.eclipse.jdt.ui.javaTypeProposalCategory\:65538\u0000org.eclipse.jdt.ui.textProposalCategory\:65539\u0000org.eclipse.jdt.ui.javaAllProposalCategory\:65540\u0000org.eclipse.jpt.jaxb.ui.jaxbCompletionProposals\:6\u0000org.eclipse.jpt.jpa.ui.jpaProposalCategory\:7\u0000org.eclipse.jst.ws.jaxws.ui.jaxwsProposalComputer\:8\u0000org.eclipse.mylyn.java.ui.javaAllProposalCategory\:9\u0000org.eclipse.pde.api.tools.ui.apitools_proposal_category\:10\u0000org.eclipse.recommenders.calls.rcp.proposalCategory.templates\:11\u0000org.eclipse.recommenders.chain.rcp.proposalCategory.chain\:12\u0000org.eclipse.recommenders.completion.rcp.proposalCategory.intelligent\:13\u0000
+content_assist_disabled_computers=org.eclipse.jdt.ui.javaNoTypeProposalCategory\u0000org.eclipse.jdt.ui.javaTypeProposalCategory\u0000org.eclipse.jdt.ui.textProposalCategory\u0000org.eclipse.jdt.ui.javaAllProposalCategory\u0000org.eclipse.mylyn.java.ui.javaAllProposalCategory\u0000org.eclipse.recommenders.calls.rcp.proposalCategory.templates\u0000org.eclipse.recommenders.chain.rcp.proposalCategory.chain\u0000
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="ref_objto.unref_obj.Example"><rhs name\="ref_objto.unref_obj.Example"/></lhs><lhs name\="array.vararg.Example"><rhs name\="array.vararg.Sample"/></lhs><lhs name\="array.argument.Example2"><rhs name\="array.argument.Example2"/></lhs><lhs name\="array.garbagecollection.Example"><rhs name\="array.garbagecollection.Example"/></lhs><lhs name\="array.objectbytecode.intojvm.Example"><rhs name\="array.objectbytecode.intojvm.Example"/></lhs><lhs name\="array.combine.Example"><rhs name\="array.combine.Example"/></lhs><lhs name\="java.lang.Runnable"><rhs name\="java.lang.Thread"/></lhs><lhs name\="java.lang.Thread"><rhs name\="java.lang.Thread"/></lhs><lhs name\="java.lang.Enum"><rhs name\="enumeration.Month"/></lhs><lhs name\="enumeration.Month"><rhs name\="enumeration.Month"/></lhs><lhs name\="p1.A"><rhs name\="p1.A"/></lhs><lhs name\="p3.A"><rhs name\="p3.A"/></lhs><lhs name\="java.util.Iterator"><rhs name\="java.util.Scanner"/></lhs><lhs name\="java.io.Closeable"><rhs name\="java.util.Scanner"/></lhs><lhs name\="java.lang.AutoCloseable"><rhs name\="java.util.Scanner"/></lhs></history>
+content_assist_number_of_computers=24
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.exception.name=e
+org.eclipse.jdt.ui.formatterprofiles.version=14
+org.eclipse.jdt.ui.gettersetter.use.is=true
+org.eclipse.jdt.ui.overrideannotation=true
+org.eclipse.jdt.ui.text.code_templates_migrated=true
+org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.templates_migrated=true
+spelling_locale_initialized=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

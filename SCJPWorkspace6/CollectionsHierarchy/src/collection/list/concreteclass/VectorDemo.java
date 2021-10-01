@@ -1,0 +1,25 @@
+package collection.list.concreteclass;
+
+import java.util.Vector;
+
+public class VectorDemo {
+
+	public static void main(String[] args) {
+
+		Vector v = new Vector();
+
+		for (int i = 0; i <= 9; i++) {
+
+			v.addElement(new Integer(i * 10));
+		}
+
+		System.out.println("Initial elements: " + v);
+
+		v.removeElement(0);
+		v.removeElement(1);
+//		v.removeElement(10);
+
+		System.out.println("elements after removing: " + v);
+		
+	}
+}

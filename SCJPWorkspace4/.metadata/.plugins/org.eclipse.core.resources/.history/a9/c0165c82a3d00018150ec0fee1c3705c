@@ -1,0 +1,5 @@
+package exception.custom.development;
+
+public interface Bank {
+
+}

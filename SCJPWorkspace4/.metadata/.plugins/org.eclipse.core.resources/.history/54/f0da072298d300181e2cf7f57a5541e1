@@ -1,0 +1,5 @@
+package multi.daemonthread;
+
+public class Test31_parentPropertyToChild {
+
+}

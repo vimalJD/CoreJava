@@ -1,0 +1,5 @@
+package super1.constructor.member;
+
+public class B7 extends A7{
+
+}

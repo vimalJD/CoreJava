@@ -1,0 +1,5 @@
+package nonstaticmembers;
+
+public class PassingObjReference {
+
+}

@@ -1,0 +1,29 @@
+package i18n;
+
+import java.util.Locale;
+import java.util.ResourceBundle;
+
+public class ResourceBundleDemo {
+
+	public static void main(String[] args) {
+		
+		//loading properties file based on current locale
+		
+		
+		
+//		ResourceBundle rb = ResourceBundle().getBundle("wish", Locale.US);
+		
+		//loaded properties file based on passed locale
+//		ResourceBundle rb1 = ResourceBundle().getBundle("wish", new Locale(Locale.FRENCH.toString(), Locale.FRENCH.toString()));
+		
+//		String wish = rb.getString("hellowish");
+//		System.out.println(wish);
+
+	}
+
+	/*private static ResourceBundle ResourceBundle() {
+		
+		java.util.ResourceBundle rb1 = "hellowish";
+		return rb1;
+	}*/
+}

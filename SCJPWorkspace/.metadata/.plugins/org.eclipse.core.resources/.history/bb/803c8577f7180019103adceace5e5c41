@@ -1,0 +1,9 @@
+package nonstaticmembers.classload.injvm;
+
+public class B {
+
+	void m2(A a) {
+		
+		a.print(msg);
+	}
+}

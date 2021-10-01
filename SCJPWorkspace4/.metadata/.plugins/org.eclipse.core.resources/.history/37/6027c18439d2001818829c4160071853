@@ -1,0 +1,5 @@
+package multi.over.loadingnoverriding;
+
+abstract class MyRunnable5 implements Runnable {
+
+}

@@ -1,0 +1,23 @@
+package multi.controlling.synchronization;
+
+public class MessagePrintThread implements Runnable {
+
+	String msg;
+	PrintMessage pm;
+	Thread th;
+
+	public MessagePrintThread(String msg, PrintMessage pm) {
+
+		this.msg = msg;
+		this.pm = pm;
+
+		th = new Thread(this);
+		th.start();
+	}
+
+	@Override
+	public void run() {
+		pm.printMsg(msg);
+	}
+
+}

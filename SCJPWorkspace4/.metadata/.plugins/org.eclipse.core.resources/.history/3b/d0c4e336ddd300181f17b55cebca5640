@@ -1,0 +1,9 @@
+package multi.controlling.synchronization;
+
+public class SecondClass {
+
+	synchronized void lastMethod() {
+		System.out.println("Inside sc.lastMethod()");
+	}
+
+}

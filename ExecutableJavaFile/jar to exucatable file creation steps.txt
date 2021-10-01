@@ -1,0 +1,15 @@
+creation of jar ti executable file
+
+1).java file
+
+2).class
+
+3)manifest file
+
+	Main-Class: Calculator
+
+	and 1 empty line means hit enter 
+	
+	save it manifest.txt
+
+4)jar cfm Calculator.jar manifest.txt Calculator.class

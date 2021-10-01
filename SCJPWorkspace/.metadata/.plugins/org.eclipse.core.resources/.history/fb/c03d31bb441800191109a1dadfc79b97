@@ -1,0 +1,15 @@
+package nonstaticmembers.controlflow;
+
+public class A {
+
+	public A() {
+		
+		A a = new A();
+	}
+
+	public static void main(String[] args) {
+		
+		System.out.println("main");
+		A a = new A();
+	}
+}

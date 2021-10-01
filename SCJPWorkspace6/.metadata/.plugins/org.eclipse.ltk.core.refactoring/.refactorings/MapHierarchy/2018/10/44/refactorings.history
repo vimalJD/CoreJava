@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring clone="true" comment="Infer generic type arguments on &apos;MapHierarchy&apos;&#x0D;&#x0A;- Original project: &apos;MapHierarchy&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     map.concreteclasses.MpaClassesDemo.java&#x0D;&#x0A;- Assume clone() returns an instance of the receiver type&#x0D;&#x0A;- Leave unconstrained type arguments raw" description="Infer generic type arguments" element1="/src&lt;map.concreteclasses{MpaClassesDemo.java" flags="6" id="org.eclipse.jdt.ui.infer.typearguments" leave="true" stamp="1540897099017" version="1.0"/>
+</session>

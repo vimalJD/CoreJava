@@ -1,0 +1,15 @@
+package multi.threadgroup;
+
+public class ThreadGroupImp implements Runnable{
+
+	String name;//name of thread
+	
+	
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

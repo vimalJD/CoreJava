@@ -1,0 +1,5 @@
+package multi.interthread.communication;
+
+public class Test41_ITCWithWaitNotify {
+
+}

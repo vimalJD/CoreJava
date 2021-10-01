@@ -1,0 +1,22 @@
+package com.vim.stringtoken;
+
+import java.util.StringTokenizer;
+
+public class StringTokenizerDemo {
+
+	public static void main(String[] args) {
+
+		String str = "Vimla patel,Right now  in pune";
+
+//		StringTokenizer st = new StringTokenizer(str);
+
+		StringTokenizer st = new StringTokenizer(str, ",");
+
+		System.out.println("Number of tokens: " + st.countTokens());
+
+		while (st.hasMoreElements()) {
+			System.out.println(st.nextElement());
+
+		}
+	}
+}

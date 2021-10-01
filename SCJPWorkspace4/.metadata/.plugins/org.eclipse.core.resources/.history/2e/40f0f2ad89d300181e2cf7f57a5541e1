@@ -1,0 +1,5 @@
+package multi.threadpriority;
+
+public class MyThread1 {
+
+}

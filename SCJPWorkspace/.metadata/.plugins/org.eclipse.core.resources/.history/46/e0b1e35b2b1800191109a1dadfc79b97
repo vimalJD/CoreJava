@@ -1,0 +1,30 @@
+package nonstaticmembers;
+
+public class PassingObjReference {
+
+	int x=10;
+	int y=20;
+	
+	void m1(PassingObjReference passingObjReference) {
+		
+		System.out.println("\tpassingObjReference : "+passingObjReference);
+		
+		passingObjReference = new PassingObjReference();
+		
+		System.out.println("\tpassingObjReference : "+passingObjReference);
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		PassingObjReference passingObjReference1 = new PassingObjReference();
+		
+		PassingObjReference passingObjReference2 = new PassingObjReference();
+		
+		System.out.println("passingObjReference2 : "+passingObjReference2);
+		
+		passingObjReference1.m1(passingObjReference2);
+		
+		System.out.println("passingObjReference2 : "+passingObjReference2);
+	}
+}

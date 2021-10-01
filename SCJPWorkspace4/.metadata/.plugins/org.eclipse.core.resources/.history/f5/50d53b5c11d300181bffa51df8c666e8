@@ -1,0 +1,19 @@
+package multi.overridestart;
+
+public class PrintNumbers {
+
+	// task 1
+	void print1To50() {
+
+		for (int i = 1; i <= 50; i++) {
+
+			System.out.println(i + "\t");
+			try {
+				Thread.sleep(100);
+			} catch (InterruptedException ie) {
+
+				ie.printStackTrace();
+			}
+		}
+	}
+}

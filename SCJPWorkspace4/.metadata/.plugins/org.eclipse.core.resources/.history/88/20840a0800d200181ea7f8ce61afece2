@@ -1,0 +1,7 @@
+package multithreading.runmethod;
+
+public class MyRunnable2 implements Runnable{
+
+	
+
+}

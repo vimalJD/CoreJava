@@ -1,0 +1,21 @@
+package multi.daemonthread;
+
+public class Test31_parentPropertyToChild {
+
+	public static void main(String[] args) throws InterruptedException {
+
+		System.out.println("main executed");
+
+		Thread th = Thread.currentThread();
+
+		System.out.println("main priority: " + this.getPriority());
+		System.out.println("main daemon: " + this.isDaemon());
+
+		
+		MyThread2 mt2 = new MyThread2();
+		mt2.start();
+		
+		System.out.println("MyThread2 priority: " + this.getPriority());
+		System.out.println("MyThread2 daemon: " + this.isDaemon());
+	}
+}

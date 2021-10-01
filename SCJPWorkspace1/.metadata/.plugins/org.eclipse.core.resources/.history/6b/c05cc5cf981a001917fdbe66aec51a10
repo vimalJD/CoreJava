@@ -1,0 +1,5 @@
+package differentiate.refvariable;
+
+public class B7 extends A7{
+
+}

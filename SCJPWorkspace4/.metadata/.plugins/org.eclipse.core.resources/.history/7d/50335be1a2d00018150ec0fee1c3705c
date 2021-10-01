@@ -1,0 +1,13 @@
+package exception.custom.development;
+
+public class InvalidAmountException {
+
+	public InvalidAmountException() {
+		super();
+	}
+	
+	public InvalidAmountException(String msg) {
+		
+		super();
+	}
+}

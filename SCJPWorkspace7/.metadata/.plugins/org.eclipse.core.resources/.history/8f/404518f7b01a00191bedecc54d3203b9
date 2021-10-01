@@ -1,0 +1,124 @@
+package com.swing.bufclock;
+
+import java.awt.*;
+import java.awt.event.*;
+import java.awt.image.BufferedImage;
+import static java.lang.Math.*;
+import java.util.Calendar;
+import javax.swing.*;
+
+class ClockComponent extends JComponent {
+
+	// zmienne prywatne
+	private Calendar systemTime = Calendar.getInstance();
+	private int centerX = 200;
+	private int centerY = 200;
+
+	private Color tloKolor;
+	BufferedImage clockFace;
+
+	// konstruktor bezparametrowy public ClockComponent(){};
+	public ClockComponent() {
+	};
+
+	public void setKolor(Color R) {
+		tloKolor = R;
+	}
+
+	public Color getKolor() {
+		return tloKolor;
+	}
+
+	@Override
+	public void paint(Graphics g) {
+		// rysowanie ogólnego wyglądu zegarka
+		Graphics2D graphics = (Graphics2D) g;
+		// włączenie antialiasingu aby grafika ładniej wyglądała
+		graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+
+		if (clockFace == null) {
+			// wczytanie obrazka z tarczą
+			clockFace = new BufferedImage(400, 400, BufferedImage.BITMASK);
+			Graphics2D face = clockFace.createGraphics();
+			face.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+			drawTiks(face);
+
+			// szerokość piura
+			BasicStroke width = new BasicStroke(3);
+			face.setStroke(width);
+			face.setPaint(Color.BLACK);
+			// face.drawOval(0, 0, 400, 400);
+			drawHands(face, 0, 0, 0, 10);
+		}
+
+		graphics.drawImage(clockFace, null, 0, 0);
+		drawSecond(graphics);
+		drawMinute(graphics);
+		drawHour(graphics);
+
+	}
+
+	// parametry wskazówki sekund
+	private void drawSecond(Graphics2D graphics) {
+		int seconds = systemTime.get(Calendar.SECOND);// pobieranie sekund z kalendarza
+		int secondsAngle = seconds * 6;// ustawienie kąta dla wskazówki
+		drawHands(graphics, -30, 160, secondsAngle, 1);// rysowanie wskazówki
+	}
+
+	// parametry wskazówki minut
+	private void drawMinute(Graphics2D graphics) {
+		int minutes = systemTime.get(Calendar.MINUTE);// pobieranie minut z kalendarza
+		double minuteAngle = (minutes) * 6;// ustawienie kąta dla wskazówki
+		drawHands(graphics, 0, 150, minuteAngle, 2);// rysowanie wskazówki
+	}
+
+	// parametry wskazówki godzin
+	private void drawHour(Graphics2D graphics) {
+		int hours = systemTime.get(Calendar.HOUR); // pobieranie godziny z kalendarza
+		double hourAngle = (hours + (double) (systemTime.get(Calendar.MINUTE)) / 60) * 30; // ustawienie kąta dla
+																							// wskazówki
+		drawHands(graphics, 0, 110, hourAngle, 4);// rysowanie wskazówki
+	}
+
+	// rysowanie wskazówek
+	private void drawTiks(Graphics2D graphics) {
+		int x = 0;
+
+		while (true) {
+			int y = 180;
+			if (x % 30 == 0)
+				y = 170;
+			drawHands(graphics, y, 180, x, 2);
+			if (x == 360)
+				break;
+			x += 6;
+
+		}
+	}
+
+	// ustawienia wyglądu wskazówki
+	private void drawHands(Graphics2D graphics, int startRadius, int endRadius, double teta, int width) {
+
+		double radian = toRadians(teta - 90);
+		int startX = centerX + (int) (startRadius * cos(radian));
+		int startY = centerY + (int) (startRadius * sin(radian));
+		int endX = centerX + (int) (endRadius * cos(radian));
+		int endY = centerY + (int) (endRadius * sin(radian));
+
+		BasicStroke line = new BasicStroke(width, BasicStroke.JOIN_ROUND, BasicStroke.CAP_ROUND);
+		graphics.setStroke(line);
+		graphics.setColor(tloKolor);
+		graphics.drawLine(startX, startY, endX, endY);
+
+	}
+
+	ActionListener update = new ActionListener() {
+
+		public void actionPerformed(ActionEvent e) {
+			systemTime.setTimeInMillis(System.currentTimeMillis());
+			repaint();
+		}
+	};
+
+	Timer fireUpdate = new Timer(1000, update);
+}

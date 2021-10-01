@@ -1,0 +1,5 @@
+package multi.onefrom.othercustomthread;
+
+public class MyThread {
+
+}

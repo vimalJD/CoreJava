@@ -1,0 +1,10 @@
+package nonstaticmembers.classload.injvm;
+
+public class Example1 {
+
+	static {
+		System.out.println("Example SB - class is loaded");
+		Example1 e = new Example1();
+		
+	}
+}

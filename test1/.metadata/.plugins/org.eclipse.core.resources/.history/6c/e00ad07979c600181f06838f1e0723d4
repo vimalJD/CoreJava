@@ -1,0 +1,14 @@
+package p2;
+
+import p1.*;
+
+public class Test {
+
+public static void main(String[] args){
+		
+		A a= new A();
+		B b= new B();
+		Test c1= new Test();
+		Test c2= new Test("abc");
+	}
+}

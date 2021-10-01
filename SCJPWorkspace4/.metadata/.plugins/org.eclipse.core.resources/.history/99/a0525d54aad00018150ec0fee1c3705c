@@ -1,0 +1,17 @@
+package exception.trywithresource;
+
+import java.io.*;
+
+public class TryWithResourceRules {
+
+	public static void main(String[] args) {
+		
+		
+//		try(){};
+		
+		PrintWriter pw;
+//		try(pw=new PrintWriter(System.out)){}
+		
+		try(PrintWriter pw1=new PrintWriter(System.out)){}
+	}
+}

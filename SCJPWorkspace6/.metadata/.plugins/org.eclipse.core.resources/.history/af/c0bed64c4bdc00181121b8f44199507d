@@ -1,0 +1,8 @@
+package map.concreteclasses;
+
+public class CollegeWebSite {
+
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,14 @@
+
+G:cd cmd
+
+"cmd is package right now"
+
+G:cmd\set path=C:\Program Files\Java\jdk-9.0.4\bin
+
+G:cmd\set classpath=.;
+
+G:cmd\javac Simple.java
+
+G:cmd\java Simple
+
+o\p

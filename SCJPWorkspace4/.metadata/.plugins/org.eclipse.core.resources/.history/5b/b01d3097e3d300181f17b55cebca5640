@@ -1,0 +1,14 @@
+package multi.interthread.communication;
+
+public class WaitTest1 {
+
+	void m1() throws InterruptedException {
+		wait();
+	}
+
+	public static void main(String[] args) {
+
+		WaitTest1 wt1 = new WaitTest1();
+		wt1.m1();
+	}
+}

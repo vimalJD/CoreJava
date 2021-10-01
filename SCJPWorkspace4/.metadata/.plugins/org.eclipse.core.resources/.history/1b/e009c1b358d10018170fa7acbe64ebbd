@@ -1,0 +1,5 @@
+package multithreading.basics;
+
+public class MyRunnable2 {
+
+}

@@ -1,0 +1,11 @@
+package multi.controlling.synchronization;
+
+public class Test40_sync4 {
+
+	public static void main(String[] args) {
+		
+		PrintMessage pm = new PrintMessage();
+		
+		MessagePrintThread mpt = new MessagePrintThread("Hi", pm);
+	}
+}

@@ -1,0 +1,5 @@
+package multithreading.runmethod;
+
+public class MyRunnable {
+
+}

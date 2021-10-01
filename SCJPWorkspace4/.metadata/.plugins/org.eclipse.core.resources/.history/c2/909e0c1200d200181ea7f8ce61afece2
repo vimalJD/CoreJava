@@ -1,0 +1,10 @@
+package multithreading.runmethod;
+
+public class MyRunnable {
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		System.out.println("From MyRunnable2.run()");
+	}
+}

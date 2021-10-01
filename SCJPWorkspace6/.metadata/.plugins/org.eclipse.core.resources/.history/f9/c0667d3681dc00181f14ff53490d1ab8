@@ -1,0 +1,22 @@
+package i18n;
+
+import java.util.Locale;
+import java.util.ResourceBundle;
+
+public class RBD {
+
+	public static void main(String[] args) {
+
+	      // create a new ResourceBundle with specified locale
+	      ResourceBundle bundle = ResourceBundle.getBundle("hello", Locale.US);
+
+	      // print the text assigned to key "hello"
+	      System.out.println("" + bundle.getString("hello"));
+
+	      // check if the bundle contains "bye" key
+	      System.out.println("" + bundle.containsKey("bye"));
+
+	      // check if the bundle contains "hello" key
+	      System.out.println("" + bundle.containsKey("hello"));
+	   }
+}

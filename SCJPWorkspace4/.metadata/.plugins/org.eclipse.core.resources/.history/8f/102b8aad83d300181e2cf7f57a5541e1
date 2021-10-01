@@ -1,0 +1,5 @@
+package multi.thread.objstate;
+
+public class Test23_GetThreadStates {
+
+}

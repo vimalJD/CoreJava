@@ -1,0 +1,26 @@
+package i18n;
+
+import java.util.ResourceBundle;
+
+public class ResourceBundleDemo {
+
+	public static void main(String[] args) {
+		
+		//loading properties file based on current locale
+		
+		ResourceBundle rb = ResourceBundle().getBundle("wish");
+		
+		//loaded properties file based on passed locale
+		ResourceBundle rb1 = ResourceBundle().
+		
+		String wish = rb.getString("hellowish");
+		System.out.println(wish);
+
+	}
+
+
+	private static ResourceBundle ResourceBundle() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

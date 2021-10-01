@@ -1,0 +1,75 @@
+package multithreading.runmethod;
+
+public class Test03_RunExecution {
+
+	public static void main(String[] args) {
+
+		System.out.println("main executed");
+		// case #1:===========
+		System.out.println("case 1 befor th1");
+		Thread th1 = new Thread();
+		th1.start();
+		System.out.println("case 1 after th1");
+
+		// case #2:===========
+		System.out.println("case 2 befor mt");
+		MyThread mt = new MyThread();
+		mt.start();
+		System.out.println("case 2 after mt");
+
+		System.out.println("case 3 befor mr");
+		// case #3:===========
+		MyRunnable mr = new MyRunnable();
+//		mr.start();
+
+		// case #4:===========
+		System.out.println("case 4 befor th2");
+		Thread th2 = new Thread(mr);
+		th2.start();
+
+		// case #5:===========
+		System.out.println("case 5 befor mt1");
+//		MyThread mt1 = new MyThread();
+
+		System.out.println("case 5.1 befor th3");
+//		Thread th3 = new Thread(mt1);
+//		th3.start();
+
+		// case #6:===========
+		System.out.println("case 6 befor th4");
+		Thread th4 = new Thread();
+		th4.start();
+
+		// case #7:===========
+//		Thread th5 = new MyRunnable();
+//		th5.start();
+
+		// case #8:===========
+		System.out.println("case 8 befor r");
+		Runnable r = new MyRunnable();
+//		r.start();
+
+		// case #9:===========
+		System.out.println("case 9 befor th6");
+		Thread th6 = new Thread(r);
+		th6.start();
+
+		// case #10:===========
+		System.out.println("case 10 befor r1");
+		Runnable r1 = new MyThread();
+//		r1.start();
+
+		// case #11:===========
+		System.out.println("case 11 befor th7");
+		Thread th7 = new Thread(r1);
+		th7.start();
+
+		// case #12:===========.
+		System.out.println("case 12 befor mr2");
+		MyRunnable mr2 = new MyRunnable();
+
+		System.out.println("case 12.1 befor mt2");
+		MyThread mt2 = new MyThread();
+		mt2.start();
+	}
+}

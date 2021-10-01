@@ -1,0 +1,13 @@
+package multi.threadpriorityandname;
+
+public class Test27_currentThreadName {
+
+	static {
+		System.out.println("In sb");
+
+		// retrieving currently executing thread reference
+
+		Thread th = Thread.currentThread();
+		System.out.println("sb is executing in \"" + th.getName() + "\"thread\n");
+	}
+}

@@ -1,0 +1,29 @@
+package collection.compare;
+
+public class Example implements Comparable {
+
+	int x;
+
+	public Example() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Example(int x) {
+		this.x = x;
+	}
+
+	@Override
+	public int compareTo(Object o) {
+
+		Example e = (Example) o;
+		return e.x - this.x;
+	}
+
+	@Override
+	public String toString() {
+//		return "Example [x=" + x + "]";
+
+		return "" + x;
+	}
+
+}

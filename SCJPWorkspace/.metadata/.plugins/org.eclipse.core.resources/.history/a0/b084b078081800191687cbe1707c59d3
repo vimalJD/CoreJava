@@ -1,0 +1,26 @@
+package nonstaticmembers;
+
+public class ObjectAsArgument {
+
+	int x = 10;
+	int y = 20;
+
+	void m2(ObjectAsArgument objectAsArgument) {
+
+//		this.x = x;
+//		this.y = y;
+	}
+
+	public static void main(String[] args) {
+
+		ObjectAsArgument objectAsArgument1 = new ObjectAsArgument();
+		System.out.println(objectAsArgument1);
+
+		ObjectAsArgument objectAsArgument2 = new ObjectAsArgument();
+		System.out.println(objectAsArgument2);
+
+		objectAsArgument1.m2(objectAsArgument2);
+		System.out.println(objectAsArgument2);
+
+	}
+}

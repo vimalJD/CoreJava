@@ -1,0 +1,22 @@
+package multi.daemonthread;
+
+public class DaemonThread implements Runnable {
+
+	Thread th;
+
+	DaemonThread() {
+
+		th = new Thread(this);
+
+		th.setDaemon(true);
+		th.start();
+
+		th.setDaemon(true);
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+}

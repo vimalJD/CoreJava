@@ -1,0 +1,28 @@
+package multithreading.runmethod;
+
+public class Test03_RunExecution {
+
+	public static void main(String[] args) {
+
+		// case #1:===========
+		Thread th1 = new Thread();
+		th1.start();
+
+		// case #2:===========
+		MyThread mt = new MyThread();
+		mt.start();
+
+		// case #3:===========
+		MyRunnable mr = new MyRunnable();
+//		mr.start();
+		// case #4:===========
+		Thread th2 = new Thread(mr);
+		th2.start();
+
+		// case #5:===========
+		MyThread mt = new MyThread();
+		Thread th3 = new Thread(mt);
+		th3.start();
+
+	}
+}

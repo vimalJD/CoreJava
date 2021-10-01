@@ -1,0 +1,37 @@
+//
+
+ctrl + devide (/)
+
+ctrl + shift + devide (/)
+
+ctrl + plus (+)
+
+ctrl + minus (-)
+
+//zoom out
+
+ctrl + shift + minus (-)
+
+//zoom in
+
+ctrl + shift + plus (+)
+
+
+//
+alt + shift + r
+
+//method menu
+
+alt + shift + s
+
+//same two windows like contex switching windows
+ctrl + shift + under score (_)
+
+https://dzone.com/articles/effective-eclipse-shortcut-key
+
+//It shows shortcut menu.
+ctrl + shift + L
+
+
+
+

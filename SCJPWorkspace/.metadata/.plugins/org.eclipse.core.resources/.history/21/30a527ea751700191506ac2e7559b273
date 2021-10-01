@@ -1,0 +1,20 @@
+package localpreference;
+
+public class Example1 {
+
+	static int a;
+
+	static void m1(int a) {
+
+		Example1.a = a;
+//		a=Example1.a;
+		System.out.println(a);
+	}
+
+	public static void main(String[] args) {
+
+		System.out.println(a);
+		m1(50);
+		System.out.println(a);
+	}
+}

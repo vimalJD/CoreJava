@@ -1,0 +1,5 @@
+package exception.trywithresource.j7enhance;
+
+public class CatchWithMultipleException {
+
+}

@@ -1,0 +1,19 @@
+package nonstaticmembers.classload.injvm;
+
+public class B {
+
+	//part 2
+	A a;
+	void m2(A a) {
+		
+		this.a=a;
+		
+		//part 1
+//		a.print(msg);
+	}
+	
+	//part 2
+	void m3(String masg) {
+		a.print(msg);
+	}
+}

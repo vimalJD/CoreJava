@@ -1,0 +1,5 @@
+package subclass.obj.struct;
+
+public class B {
+
+}

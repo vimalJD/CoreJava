@@ -1,0 +1,182 @@
+package com.swing;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.io.*;
+
+/**
+ * A Calculator display. Allows entry of Java arithmetic expressions, including
+ * parentheses and modulus. An output field display the result of the previous
+ * calculation.
+ */
+class CalculatorGUI extends JFrame {
+	/**
+	 * Create a simple calculator GUI for Java arithmetic expressions.
+	 */
+	public CalculatorGUI() {
+		final int width = 275, height = 300;
+		setSize(width, height);
+		setBackground(Color.white);
+
+		final Container contents = getContentPane();
+
+		JPanel panel = setupGUI();
+		contents.add(panel, "Center");
+		contents.add(new QuitJPanel(), "South");
+		addWindowListener(new WindowCloser());
+		setVisible(true);
+	}
+
+	/**
+	 * A super class for calculator buttons. Sets the button's label, font and
+	 * background color.
+	 */
+	class CalculatorButton extends JButton {
+		public CalculatorButton(final String label) {
+			super(label);
+			setFont(buttonFont);
+			setBackground(Color.white);
+		}
+	}
+
+	/**
+	 * A component of an expression - operator or digit.
+	 */
+	class ExpressionButton extends CalculatorButton {
+		public ExpressionButton(final String label) {
+			super(label);
+			// Append this button's label to the input field when
+			// it is pressed.
+			addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					JTextField input = getInputField();
+					input.setText(input.getText() + label);
+				}
+			});
+		}
+	}
+
+	/**
+	 * Clear the input field.
+	 */
+	class ClearButton extends CalculatorButton {
+		public ClearButton() {
+			super("C");
+			addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					getInputField().setText("");
+				}
+			});
+		}
+	}
+
+	/**
+	 * Calculate the result from the input field and display it in the output field.
+	 */
+	class ResultButton extends CalculatorButton {
+		public ResultButton() {
+			super("=");
+			addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					// Calculate the result, and display it.
+					String text = getInputField().getText();
+					String result = text;
+					try {
+						CalculatorModel c = new CalculatorModel();
+						String answer = c.calculate(text);
+						result += " = " + answer;
+					} catch (Exception ex) {
+						result += " failed: " + ex.getMessage();
+					}
+					getOutputField().setText(result);
+					getInputField().setText("");
+				}
+			});
+		}
+	}
+
+	/**
+	 * Place the buttons, input field and output field in the GUI.
+	 */
+	protected JPanel setupGUI() {
+		JPanel panel = new JPanel();
+		GridBagLayout layout = new GridBagLayout();
+		GridBagConstraints constraints = new GridBagConstraints();
+		JButton[][] buttons = {
+				{ new ExpressionButton("7"), new ExpressionButton("8"), new ExpressionButton("9"),
+						new ExpressionButton("+"), new ExpressionButton("-"), },
+				{ new ExpressionButton("4"), new ExpressionButton("5"), new ExpressionButton("6"),
+						new ExpressionButton("*"), new ExpressionButton("/"), },
+				{ new ExpressionButton("1"), new ExpressionButton("2"), new ExpressionButton("3"),
+						new ExpressionButton("%"), new ExpressionButton("("), },
+				{ new ExpressionButton("0"), new ExpressionButton("."), new ResultButton(), new ClearButton(),
+						new ExpressionButton(")"), }, };
+
+		constraints.weightx = 1;
+		constraints.weighty = 1;
+		constraints.fill = GridBagConstraints.BOTH;
+
+		panel.setLayout(layout);
+
+		final int numCols = buttons[0].length;
+		// Where to place the next row.
+		int nextRow = 0;
+		// Add the field for input
+		JTextField inputField = getInputField();
+		addElement(panel, inputField, layout, constraints, 0, nextRow, numCols, 1);
+		nextRow++;
+
+		// Add the field for display of the result.
+		JTextField outputField = getOutputField();
+		addElement(panel, outputField, layout, constraints, 0, nextRow, numCols, 1);
+		nextRow++;
+
+		for (int row = 0; row < buttons.length; row++, nextRow++) {
+			for (int col = 0; col < buttons[row].length; col++) {
+				addElement(panel, buttons[row][col], layout, constraints, col, nextRow, 1, 1);
+			}
+		}
+		return panel;
+	}
+
+	/**
+	 * Add an element to the GUI's GridBagLayout.
+	 */
+	protected void addElement(JPanel panel, JComponent element, GridBagLayout layout, GridBagConstraints constraints,
+			int row, int col, int width, int height) {
+		constraints.gridx = row;
+		constraints.gridy = col;
+		constraints.gridwidth = width;
+		constraints.gridheight = height;
+		layout.setConstraints(element, constraints);
+		panel.add(element);
+	}
+
+	protected JTextField getInputField() {
+		return inputField;
+	}
+
+	protected JTextField getOutputField() {
+		return outputField;
+	}
+
+	private final JTextField inputField = new JTextField();
+	{
+		inputField.setEditable(false);
+		inputField.setFont(fieldFont);
+		inputField.setBackground(Color.white);
+	}
+	private final JTextField outputField = new JTextField();
+	{
+		outputField.setEditable(false);
+		outputField.setFont(fieldFont);
+		outputField.setBackground(Color.white);
+	}
+	// The font to be used by buttons.
+	private static final int buttonFontSize = 20;
+	private static final Font buttonFont = new Font("Courier", Font.BOLD, buttonFontSize);
+	// The font to be used for the input/output fields.
+	private static final int fontSize = 15;
+	private static Font fieldFont = new Font("Serif", Font.PLAIN, fontSize);
+}

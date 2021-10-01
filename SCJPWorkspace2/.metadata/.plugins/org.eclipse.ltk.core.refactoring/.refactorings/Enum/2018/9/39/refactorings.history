@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;enumeration.Color.java&apos; to &apos;TestColor.java&apos;&#x0D;&#x0A;- Original project: &apos;Enum&apos;&#x0D;&#x0A;- Original element: &apos;enumeration.Color.java&apos;&#x0D;&#x0A;- Renamed element: &apos;enumeration.TestColor.java&apos;" description="Rename compilation unit &apos;Color.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;enumeration{Color.java" name="TestColor.java" references="false" stamp="1538251136908" version="1.0"/>
+</session>
